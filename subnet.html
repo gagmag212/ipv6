@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./big-number.js"></script>
+    <script src="./ipv6.js"></script>
+
+    <title>ipv6</title>
+</head>
+
+<body bgcolor="FF5733">
+    <center>
+    <section>
+        <div>
+                <h1><B><font color="white" style="font-size: 80">Subnet</font></B></h2>
+                <hr style="20" color="black">
+            <div>
+                <h3><B><font color="white" style="font-size: 80">Original network</font></B></h3>
+                <h3><B><font id="original" color="white" style="font-size: 80"></font></B></h3>
+                <h3><B><font id="note" color="white" style="font-size: 80"></font></B></h3>
+                
+                <hr style="20" color="black">
+                <form method="POST" action="">
+                    <h3><B><font id="s2" color="white" style="font-size: 80"></font></B></h3>
+                </form>
+                <br>
+                <input type="button" value="Show next 16" onClick="showNext()" style="width: 124px;height: 60px; font-size: 30; border-radius: 8px">
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+<script>
+    var ip = findGetParameter("ip");
+    var prefix = findGetParameter("prefix");
+    var i = findGetParameter("i");
+    console.log(ip)
+    console.log(prefix)
+    console.log(i)
+    var nu = 16
+    showSubnet(ip, prefix, i, nu)
+    var n = parseInt(i) - parseInt(prefix)
+    var total = BigNumber(2).power(n).toString() + " network"
+    document.getElementById("note").innerHTML = total + " /" + i
+    document.getElementById("original").innerHTML = ip + "/" + prefix
+
+    function showNext() {
+        nu = nu + 16
+        console.log(nu)
+        showSubnet(ip, prefix, i, nu)
+    }
+</script>
+
+</html>

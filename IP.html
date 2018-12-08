@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./big-number.js"></script>
+    <script src="./Script.js"></script>
+    <script src="./ipv6.js"></script>
+
+
+    <title>ipv6 </title>
+</head>
+
+<body bgcolor="FF5733">
+        <center>
+    <div >
+       
+            <h1><B><font color="white" style="font-size: 80">IPv6</font></B></h1>
+            <hr style="20" color="black">
+        <div>
+            <h2><B><font color="white" style="font-size: 80">IP Address</font></B></h2>
+            <div>
+                <input id="ip" placeholder="IP Address" style="width: 500px;height: 40px; font-size: 30; border-radius: 8px"/>
+            </div>
+            <h2><B><font id="error" color="white" style="font-size: 80"></font></B></h2>
+            <br>
+        </div>
+       
+        <div >
+            <h2><B><font color="white" style="font-size: 80">Prefix length</font></B></h2>
+            <select aria-label="Prefix length" id="prefix" title="Prefix length" ="button" aria-haspopup="true"
+                aria-controls="dropdown-menu2" style="width: 500px;height: 40px; font-size: 30; border-radius: 8px">
+            </select>
+            <br>
+        </div>
+        
+        <div>
+            <br>
+            <input type="button" value="Calculate" onClick="checkIPV6()" style="width: 124px;height: 60px; font-size: 30; border-radius: 8px">
+     
+        </div>
+        <hr style="50" color="black">
+    </div>
+
+
+
+    <section id="hide">
+        <div>
+            <div>
+                    
+                <h3><B><font color="white" style="font-size: 80">Calculated</font></B></h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><font color="white" style="font-size: 80">IP address</font></td>
+                            <td><font id="ipAddress" color="white" style="font-size: 80"></font></td> 
+                        </tr>
+
+                        <tr>
+                            <td><font color="white" style="font-size: 80">Network</font></td>
+                            <td><font id="network" color="white" style="font-size: 80"></font></td>  
+                        </tr>
+
+                        <tr>
+                            <td><font color="white" style="font-size: 80">Prefix length</font></td>
+                            <td><font id="prefixLength" color="white" style="font-size: 80"></font></td>  
+                        </tr>
+
+                        <tr>
+                            <td><font color="white" style="font-size: 80">Network range</font></td>
+                            <td><font id="networkLengthStart" color="white" style="font-size: 80"></font></td>  
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><font id="networkLengthEnd" color="white" style="font-size: 80"></font></td> 
+                        </tr>
+
+                        <tr>
+                            <td><font color="white" style="font-size: 80">Total IP addresses</font></td>
+                            <td><font id="totalIP" color="white" style="font-size: 80"></font></td>  
+                        </tr>
+
+                        <tr>
+                            <td><font color="white" style="font-size: 80">IP address (full)</font></td>
+                            <td><font id="fullIP" color="white" style="font-size: 80"></font></td>  
+                        </tr>
+
+                        <tr>
+                            <td><font color="white" style="font-size: 80">Integer ID</font></td>
+                            <td><font id="integerIP" color="white" style="font-size: 80"></font></td>  
+                        </tr>
+
+                        <tr>
+                            <td><font color="white" style="font-size: 80">Hexadecimal ID</font></td>
+                            <td><font id="hexIP" color="white" style="font-size: 80"></font></td>  
+                            
+                        </tr>
+
+                        <tr>
+                            <td><font color="white" style="font-size: 80">Dotted decimal ID</font></td>
+                            <td><font id="dotIP" color="white" style="font-size: 80"></font></td>  
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr style="50" color="black">
+            <h3><B><font color="white" style="font-size: 80">Subnet</font></B></h3>
+        </div>
+    </section>
+    <br>
+    <section>
+        <div>
+            
+            <div>
+                <form method="POST" action="">
+                    
+                    <font id="subnet" color="white" style="font-size: 80"></font></td>
+                    
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+</body>
+<script>runPrefix(); hide();</script>
+
+</html>
